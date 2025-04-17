@@ -16,13 +16,12 @@ Welcome! This guide will help you build and run the Dockerized RStudio environme
 After cloning or unzipping, you should see:
 
 ```
-├── input/            ← Put your raw data files here
+├── input/            ← The raw data file will be contained here
+├── output/           ← Data files created by the analysis script will go here.
 ├── Dockerfile        ← Docker configuration
-├── analysis.Rmd      ← Your main analysis script (or `run_analysis.R`)
+├── analysis.R        ← Main analysis script
 └── README.md         ← (This file)
 ```
-
-> **Note:** Make sure your raw data lives in the `input/` folder (rename any existing folder accordingly).
 
 ---
 
