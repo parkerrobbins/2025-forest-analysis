@@ -1,6 +1,10 @@
-# Restore environment
-if (requireNamespace("renv", quietly = TRUE) &&
-    file.exists("renv.lock")) {
+# Check if 'renv' is installed, if not, install it
+if (!requireNamespace("renv", quietly = TRUE)) {
+  install.packages("renv")
+}
+
+# Restore environment if 'renv' is installed and 'renv.lock' exists
+if (file.exists("renv.lock")) {
   renv::restore(prompt = FALSE)
 }
 
