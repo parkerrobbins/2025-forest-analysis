@@ -1,13 +1,3 @@
-# Check if 'renv' is installed, if not, install it
-if (!requireNamespace("renv", quietly = TRUE)) {
-  install.packages("renv")
-}
-
-# Restore environment if 'renv' is installed and 'renv.lock' exists
-if (file.exists("renv.lock")) {
-  renv::restore(prompt = FALSE)
-}
-
 # Reproducible seed
 set.seed(20250417)
 

@@ -19,6 +19,9 @@ COPY . /home/rstudio/project
 # Fix permissions
 RUN chown -R rstudio:rstudio /home/rstudio/project
 
+# Restore project
+RUN R -e "renv::restore(project = '/home/rstudio/project', prompt = FALSE)"
+
 # Expose RStudio Server port
 EXPOSE 8787
 
