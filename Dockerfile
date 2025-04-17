@@ -1,11 +1,18 @@
 FROM rocker/rstudio:4.2.3
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libxml2-dev \
-    libssl-dev \
-    libcurl4-openssl-dev && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      libcurl4-openssl-dev \
+      libssl-dev \
+      libxml2-dev \
+      libfontconfig1-dev \
+      libfreetype6-dev \
+      libx11-dev \
+      pandoc \
+      zlib1g-dev \
+      pkg-config && \
+    rm -rf /var/lib/apt/lists/
 
 # Set working directory
 WORKDIR /home/rstudio/project
