@@ -75,7 +75,7 @@ After cloning or unzipping, you should see:
 
 ## 6. Run the Analysis
 
-- In the **Files** pane, open `analysis.Rmd` and click **Knit** (or open `run_analysis.R` and click **Source**).
+- In the **Files** pane, open `analysis.R` and click **Source**.
 - Everything (packages, data, paths) is configured to work out of the box.
 
 ---
